@@ -9,14 +9,15 @@ import org.springframework.web.client.RestTemplate;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Service
 public class ModifyRequestSystemTime implements ModifyRequestService{
     @Override
     public void modifyRq(Request request) {
 
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        request.setSystemTime(df.format(new SimpleDateFormat()));
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+        request.setSystemTime(df.format(new Date()));
 
         HttpEntity<Request> httpEntity = new HttpEntity<>(request);
 

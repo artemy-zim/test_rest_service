@@ -42,7 +42,7 @@ public class MyController {
         modifyRequestService.modifyRq(request);
         Response responseAfterModify = myModifyService.modify(response);
 
-        log.info("Исходящий response: " + responseAfterModify);
+        log.info("Исходящий response: " + response);
 
         return new ResponseEntity<>(responseAfterModify, HttpStatus.OK);
     }
