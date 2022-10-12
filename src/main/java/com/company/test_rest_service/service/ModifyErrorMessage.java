@@ -13,9 +13,7 @@ public class ModifyErrorMessage implements MyModifyService{
 
     @Override
     public Response modify(Response response) {
-
         response.setErrorMessage("Что-то сломалось");
-
         return response;
     }
 }

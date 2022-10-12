@@ -12,9 +12,7 @@ public class ModifySystemTime implements MyModifyService{
 
     @Override
     public Response modify(Response response) {
-
         response.setSystemTime("");
-
         return response;
     }
 }

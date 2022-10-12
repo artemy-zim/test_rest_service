@@ -6,13 +6,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Qualifier("ModifyUid")
-public class ModifyUid implements MyModifyService{
+public class ModifyUid implements MyModifyService {
 
     @Override
     public Response modify(Response response) {
-
         response.setUid("New Uid");
-
         return response;
     }
 }
